@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="KlantBeeld" targetNamespace="http://tempuri.org/KlantBeeld" xmlns:oldtns1="http://www.mrmnames.net" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/KlantBeeld" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="KlantBeeldService_InlineSchema2.xsd"/>
+        <binding hasEncoding="false" imported="true" name="KlantBeeldSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.mrmnames.net" xmlns:Q1="http://www.mrmnames.net" xmlns:mrm="http://tempuri.org/KlantBeeld">
+<xsd:include schemaLocation="KlantBeeldService_InlineSchema2.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Operation1_in">
+    <wsdl:part element="oldtns1:Input" name="Input"/>
+  </wsdl:message>
+  <wsdl:message name="Operation1_out">
+    <wsdl:part element="oldtns1:Output" name="Output"/>
+  </wsdl:message>
+  <wsdl:message name="Operation1_fault1">
+    <wsdl:part element="oldtns1:Error" name="Error"/>
+  </wsdl:message>
+  <wsdl:portType name="KlantBeeldPortType">
+    <wsdl:operation name="Operation1">
+      <wsdl:input message="tns:Operation1_in" name="Operation1_Input"/>
+      <wsdl:output message="tns:Operation1_out" name="Operation1_Output"/>
+      <wsdl:fault message="tns:Operation1_fault1" name="Operation1_Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KlantBeeldSOAP_HTTP_Binding" type="tns:KlantBeeldPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Operation1">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="Operation1_Input">
+        <soap:body parts="Input" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Operation1_Output">
+        <soap:body parts="Output" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Operation1_Fault">
+        <soap:fault name="Operation1_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KlantBeeldSOAP_HTTP_Service">
+    <wsdl:port binding="tns:KlantBeeldSOAP_HTTP_Binding" name="KlantBeeldSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/KlantBeeldSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

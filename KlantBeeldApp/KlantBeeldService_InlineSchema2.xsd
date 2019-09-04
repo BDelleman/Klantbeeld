@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mrmnames.net" xmlns:Q1="http://www.mrmnames.net" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:mrm="http://tempuri.org/KlantBeeld" xmlns:oldtns1="http://www.mrmnames.net" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/KlantBeeld" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                                                                                                                <xsd:complexType name="Input">
+        <xsd:sequence>
+          <xsd:element ref="Q1:NAW"/>
+          <xsd:element ref="Q1:Salaris"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Output">
+        <xsd:sequence>
+          <xsd:element ref="Q1:NAC"/>
+          <xsd:element ref="Q1:Salary"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Klantbeeld">
+        <xsd:sequence/>
+      </xsd:complexType>
+            <xsd:complexType name="NAW">
+        <xsd:sequence>
+          <xsd:element name="Naam" type="xsd:string"/>
+          <xsd:element name="Achternaam" type="xsd:string"/>
+          <xsd:element name="Leeftijd" type="xsd:int"/>
+          <xsd:element name="ID" type="xsd:int"/>
+          <xsd:element name="Adres" type="xsd:string"/>
+          <xsd:element name="Postcode" type="xsd:string"/>
+          <xsd:element name="Stad" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Salaris">
+        <xsd:sequence>
+          <xsd:element name="Inkomen" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="NAC">
+        <xsd:sequence>
+          <xsd:element name="Name" type="xsd:string"/>
+          <xsd:element name="Age" type="xsd:int"/>
+          <xsd:element name="ID" type="xsd:int"/>
+          <xsd:element name="Adress" type="xsd:string"/>
+          <xsd:element name="Code" type="xsd:string"/>
+          <xsd:element name="City" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Salary">
+        <xsd:sequence>
+          <xsd:element name="Income" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:element ibmSchExtn:docRoot="true" name="Input" type="Q1:Input"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="Output" type="Q1:Output"/>
+            <xsd:element name="Klantbeeld" type="Q1:Klantbeeld"/>
+            <xsd:element name="NAW" type="Q1:NAW"/>
+            <xsd:element name="Salaris" type="Q1:Salaris"/>
+            <xsd:element name="NAC" type="Q1:NAC"/>
+            <xsd:element name="Salary" type="Q1:Salary"/>
+            <xsd:complexType name="Error">
+        <xsd:sequence>
+          <xsd:element name="Errmessage" type="xsd:string"/>
+          <xsd:element name="Errcode" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:element ibmSchExtn:docRoot="true" name="Error" type="Q1:Error"/>
+        </xsd:schema>

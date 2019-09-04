@@ -1,0 +1,23 @@
+
+
+Importing file: C:\Users\BDELLEM93\IBM\IIBT10\MappingTranslate\KlantBeeld\KlantBeeldService.wsdl
+
+Copying source WSDL KlantBeeldService.wsdl to KlantBeeldService.wsdl.
+The WSDL import will proceed with bindings KlantBeeldSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/BDELLEM93/IBM/IIBT10/MappingTranslate/KlantBeeld/KlantBeeldService.wsdl.
+Parsing wsdl binding {http://tempuri.org/KlantBeeld}KlantBeeldSOAP_HTTP_Binding.
+Parsing wsdl binding input Operation1.
+Parsing wsdl binding output Operation1.
+Parsing wsdl binding fault Operation1_Fault.
+Processing doc style for operation Operation1.
+Populating WSDL schema KlantBeeldService.xsd.
+Creating file KlantBeeldService.xsd in the workspace.
+Creating file /KlantBeeldApp/KlantBeeldService_InlineSchema2.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.297 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
